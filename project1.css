@@ -1,0 +1,286 @@
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    scroll-behavior: smooth;
+}
+@media only screen and (prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior: auto;
+    }
+}
+body{
+    font-family:monospace;
+    font-size:14px;
+}
+
+.navbar-brand{
+    font-family:jokerman !important;
+    font-size:22px !important;
+    letter-spacing:7px;
+    font-weight: 700;
+}
+.navbar-nav{
+    margin-left:20px;
+}
+.navbar-nav .nav-item{
+    padding:0 10px;
+}
+.navbar-nav .nav-item .nav-link{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align:center;
+}
+.navbar-nav .nav-item .nav-link:hover{
+    background:rgba(59, 61, 61, 0.623);
+    background-size:cover !important;
+    color:rgb(153, 83, 214) !important;
+    transition:all 0.5s ease-in;
+}
+
+.dropdown-menu{
+    animation-name:dropdown;
+    animation-duration:0.6s;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+@keyframes dropdown {
+    from {top:-25%;}
+    to {top:100%;}
+}
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+@media only screen and (max-width:425px){
+    .dropdown:hover .dropdown-menu{
+        width:70%;
+        position:absolute;
+        left:45px !important;
+    }
+    #navbarSupportedContent1 > ul > li.nav-item.dropdown > div > a:nth-child(1){
+        text-align: center !important;
+    }
+    #navbarSupportedContent1 > ul > li.nav-item.dropdown > div > a:nth-child(2){
+        text-align: center !important;
+    }
+    #navbarSupportedContent1 > ul > li.nav-item.dropdown > div > a:nth-child(3){
+        text-align: center !important;
+    }
+    .navbar-nav{
+        padding-top:20px;
+    }
+}
+.dropdown-menu .dropdown-item{
+    color:#fff !important;
+    text-align:justify !important;
+    font-size:17px !important;
+    font-weight:500 !important;
+}
+.dropdown-menu .dropdown-item:hover{
+    background:rgb(5, 5, 36);
+    color:#fff !important;
+}
+
+.navbar-toggler span{
+    display:block;
+    width:30px;
+    height:2px;
+    margin:6px auto;
+    transition: all 0.6s ease;
+    background:#fff;
+}
+.navbar-toggler:hover span, .navbar-toggler:focus span{
+    background:rgba(141, 3, 233, 0.918);
+}
+.navbar-toggler[aria-expanded="true"] span:first-of-type{
+    transform:rotate(45deg) translate(6px, 6px);
+}
+.navbar-toggler[aria-expanded="true"] span:nth-of-type(2){
+    opacity:0;
+}
+.navbar-toggler[aria-expanded="true"] span:last-of-type{
+    transform:rotate(-45deg) translate(5px, -5px);
+}
+.navbar-toggler[aria-expanded="false"] span{
+    transform:none;
+    opacity:1;
+}
+
+/*----slider---*/
+#slider{
+    width:100%;
+}
+@media only screen and (min-width:991px){
+    .carousel-item, .carousel-item img{
+        height:43rem;
+    }
+}
+.carousel-caption{
+    position:absolute;
+    top:35%;
+    font-size:48px; 
+    font-weight: 600;
+}
+.carousel-caption h3{
+    letter-spacing:10px;
+    text-transform: uppercase !important;
+    font-family: 'Lucida Grande';
+}
+.carousel-caption p{
+    font-size:30px; 
+    letter-spacing:6px;
+}
+@media only screen and (min-width:768px){
+    .carousel-caption{
+        position:absolute;
+        top:40%;
+        font-size:20px;
+    }
+    .carousel-caption h3{
+        letter-spacing:10px;
+        text-transform: uppercase !important;
+        font-family: 'Lucida Grande';
+        font-size:48px;
+    }
+    .carousel-caption p{
+        font-size:25px; 
+        letter-spacing:6px;
+    }
+}
+@media only screen and (max-width:425px){
+    .carousel-caption{
+        position:absolute;
+        top:33%;
+        font-size:20px;
+    }
+    .carousel-caption h3{
+        letter-spacing:0px;
+        text-transform: uppercase !important;
+        font-family: 'Lucida Grande';
+        font-size:30px;
+    }
+    .carousel-caption p{
+        font-size:20px; 
+        letter-spacing:0px;
+    }
+}
+
+
+/*---about---*/
+#section{
+    background:#fff;
+    padding:70px 0;
+    text-align:center;
+}
+.about-header{
+    text-align:center;
+    padding:38px 0 20px;
+    font-size:35px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:600;
+    text-transform: uppercase;
+    letter-spacing:5px;
+}
+.profile-pic .img-box{
+    opacity:1;
+    display:block;
+    position:relative;
+}
+.profile-pic .img-box img{
+    filter:grayscale(1);
+}
+.profile-pic .img-box img:hover{
+    filter:grayscale(0);
+    cursor:pointer;
+}
+.profile-pic h3{
+    font-size:15px;
+    font-weight:bold;
+    margin-top:15px;
+}
+#about .fab{
+    width:25px;
+    height:25px;
+    color:#007bff !important;
+    background:#fff;
+    padding:4px;
+    border-radius:50%;
+}
+.img-box ul{
+    padding:15px 0;
+    position:absolute;
+    z-index:2 !important;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    list-style-type: none;
+    opacity:0;
+}
+.img-box ul li{
+    padding:5px;
+    display:inline-block;
+}
+.img-box:hover ul{
+     opacity:1; 
+}
+.img-box ul, .img-box ul li{
+    transition:0.5;
+}
+.team{
+    margin-top:25px;
+}
+
+
+
+
+
+/*---tour----*/
+#tour{
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("C:/Users/User/Pictures/img/bg-masthead.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 70px 0;
+    color:#fff;
+    margin-top:20px;
+    text-align:center;
+}
+.list-group{
+    transform:scale(0.89, 0.89);
+}
+.list-group:hover{
+    transform:rotate(360deg);
+    cursor:pointer;
+}
+@media only screen and (min-width:1024px){
+    #tour .card{
+        width:16rem;
+        margin:0 auto;
+    }
+}
+@media only screen and (max-width:425px){
+    #tour .card{
+        margin:5px auto;
+        width:18rem;
+        
+    }
+}
+#tour .card:hover{
+    animation: shake 0.5s;
+    animation-iteration-count: 1;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
